@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIGLT — Sistema Integrado de Gestão de Transporte, Logística, Stock e Efetivos</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===================== LOGIN ===================== -->
+  <section id="tela-login" class="tela-login">
+    <div class="login-card">
+      <div class="login-logo">SIGLT</div>
+      <p class="login-subtitulo">Sistema Integrado de Gestão<br>de Transporte, Logística, Stock e Efetivos</p>
+
+      <form id="form-login">
+        <label for="login-utilizador">Utilizador</label>
+        <input type="text" id="login-utilizador" autocomplete="username" required>
+
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" autocomplete="current-password" required>
+
+        <div id="login-erro" class="login-erro" hidden></div>
+
+        <button type="submit" id="btn-login" class="botao botao-primario botao-bloco">Entrar</button>
+      </form>
+
+      <a href="#" class="login-esqueci">Esqueci a senha</a>
+    </div>
+  </section>
+
+  <!-- ===================== APP ===================== -->
+  <div id="app" class="app" hidden>
+
+    <header class="topbar">
+      <div class="topbar-logo">SIGLT</div>
+      <div class="topbar-usuario" id="topbar-usuario">
+        <button id="btn-usuario-menu" class="usuario-botao">
+          <span id="topbar-nome">—</span>
+          <span class="seta-baixo">▾</span>
+        </button>
+        <div id="usuario-dropdown" class="usuario-dropdown" hidden>
+          <a href="#" data-view="perfil">Meu Perfil</a>
+          <a href="#" id="btn-logout">Sair</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="corpo">
+      <nav class="sidebar" id="sidebar">
+        <!-- menu gerado via js/menu.js -->
+      </nav>
+
+      <main class="conteudo" id="conteudo">
+        <!-- views renderizadas via js/router.js -->
+      </main>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/views/dashboard.js"></script>
+  <script src="js/views/rh.js"></script>
+  <script src="js/views/motoristas.js"></script>
+  <script src="js/views/veiculos.js"></script>
+  <script src="js/views/logistica.js"></script>
+  <script src="js/views/stock.js"></script>
+  <script src="js/views/usuarios.js"></script>
+  <script src="js/views/perfil.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
